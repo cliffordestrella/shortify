@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Shortify</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Shortify</h1>
+        <p>URL Shortener</p>
+
+        <form action="/" method="POST">
+            <!-- <label hidden for="url">Url</label> -->
+            <input required placeholder="Enter URL..." type="url" name="url" id="url">
+            <input type="submit" value="Shorten">
+        </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <% if (short_url) { %>
+                            <th>Shorten Link :</th>                 
+                            <td><a href="<%= short_url %>"><%= short_url %> </a></td>
+                        <% } %>
+                    </tr>
+                </thead>
+            </table>
+           
+            
+    </div>
+
+    
+</body>
+</html>
